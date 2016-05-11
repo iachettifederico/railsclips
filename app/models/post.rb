@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
-  belongs_to :user
+  include Slugger
 end
 
 # == Schema Information
