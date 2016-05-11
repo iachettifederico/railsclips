@@ -1,0 +1,18 @@
+%h1 Listing users
+
+%table.table
+  %tr
+    %th Email
+    %th First name
+    %th Last name
+  - @users.each do |user|
+    %tr
+      %td= user.email
+      %td= user.first_name
+      %td= user.last_name
+      %td
+        = link_to 'Show', user, class: "btn btn-primary"
+        = link_to 'Edit', edit_user_path(user), class: "btn btn-primary"
+        = link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger"
+
+= link_to 'New User', new_user_path, class: "btn btn-primary"
