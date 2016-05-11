@@ -1,15 +1,9 @@
-%p#notice= notice
+%h1= @post.title
+%h2
+  %small by
+  %span= @post.user
 
-%p
-  %b Title:
-  = @post.title
-%p
-  %b Content:
+.well
   = @post.content
-%p
-  %b User:
-  = @post.user
 
-= link_to 'Edit', edit_post_path(@post)
-\|
-= link_to 'Back', posts_path
+Published #{@post.created_at}
