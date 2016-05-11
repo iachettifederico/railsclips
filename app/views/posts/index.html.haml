@@ -1,6 +1,5 @@
 %h1 Listing posts
 
-
 %table.table
   %tr
     %th User
@@ -16,3 +15,5 @@
         = link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger"
 
 = link_to 'New Post', new_post_path, class: "btn btn-primary"
+
+= link_to 'Download Posts csv', posts_stats_path, class: "btn btn-primary"
