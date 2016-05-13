@@ -1,5 +1,6 @@
 class Post < ActiveRecord::Base
   belongs_to :user
+  has_one :featured_image
 end
 
 # == Schema Information
