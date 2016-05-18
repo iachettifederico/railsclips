@@ -10,6 +10,11 @@ Post.destroy_all
   User.create!(first_name: first_name, last_name: last_name, email: email)
 end
 
+%w[lorem ipsum dolor sit amet consectetur adipiscing elit].each_cons(2) do |first, last|
+  email = first[0].downcase + last.downcase + "@example.com"
+  User.create!(first_name: first.capitalize, last_name: last.capitalize, email: email)
+end
+
 users = User.all
 
 all_content = <<EOF

@@ -1,0 +1,13 @@
+.row
+  .col-lg-3
+    = simple_form_for @search, url: search_path, method: :get do |f|
+      .input-group
+        = f.text_field :q, label: false, class: "form-control", placeholder: "Search..."
+        %span.input-group-btn
+          = f.submit "Go!" , class: 'btn btn-primary'
+%hr
+- if @results.any?
+  %h3 Results
+  %ol
+    - @results.each do |result|
+      %li= Mystique.present(result, with: SearchPresenter, context: self).search_result

@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   resources :users
 
   get "posts_stats" => "stats#posts"
+
+  get "search" => "search#search", as: :search
 end
