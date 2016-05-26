@@ -13,6 +13,6 @@ servers: 1
 threaded: true
 no-epoll: true
 daemonize: true
-socket: tmp/sockets/thin.sock
+socket: /tmp/sockets/thin.sock
 chdir: /root/rails_apps/railsclips
 tag: thin_railsclips_app
